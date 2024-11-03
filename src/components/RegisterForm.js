@@ -58,7 +58,7 @@ const RegisterForm = () => {
     } catch (error) {
       console.error('Error al registrar', error);
       if (error.message.includes('password')) {
-        setErrorMessage('La contraseña no cumple con los requisitos mínimos.');
+        setErrorMessage('La contraseña debe tener minimo 6 caracteres.');
       } else {
         setErrorMessage('Error al registrar, por favor intenta nuevamente');
       }
