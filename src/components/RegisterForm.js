@@ -57,7 +57,11 @@ const RegisterForm = () => {
       setInstitution('');
     } catch (error) {
       console.error('Error al registrar', error);
-      setErrorMessage('Error al registrar, por favor intenta nuevamente');
+      if (error.message.includes('password')) {
+        setErrorMessage('La contraseña no cumple con los requisitos mínimos.');
+      } else {
+        setErrorMessage('Error al registrar, por favor intenta nuevamente');
+      }
       setSuccessMessage('');
     }
   };
