@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+--background-dark: #1c1c3c;
+--background-light-dark: #2b2b4b;
+--accent-blue: #5a3c8c;
+--accent-purple: #3c1c5a;
+--text-light: #e0e0e0;
+--text-dark: #333;
+--border-color: #6a3c8c;
+--hover-blue: #6a4fb4;
+--hover-purple: #7a559c;
+--btn-dark-purple: #3b1a5e;
+}
+
+* {
+  box-sizing: border-box ;
+  margin: 0 ;
+  padding: 0 ;
+  font-family: 'Kanit', sans-serif ;
+}
+
+body {
+  background-color: var(--background-dark) !important;
+  color: var(--text-light) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light) !important;
+}
+
+a {
+  color: var(--text-light) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+a:hover {
+  color: var(--hover-blue) !important;
+}
+
+.navbar {
+  background-color: var(--background-light-dark) !important;
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+.navbar-brand, .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 600 !important;
+}
+
+.nav-link:hover {
+  color: var(--hover-purple) !important;
+}
+
+.btn {
+  background-color: var(--accent-purple) !important;
+  border: none !important;
+  color: var(--text-light) !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+}
+
+.btn-primary {
+  background-color: var(--accent-blue) !important;
+}
+
+.btn-outline-primary {
+  color: var(--text-light) !important;
+  border: 2px solid var(--accent-blue) !important;
+  background-color: transparent !important;
+  transition: color 0.3s ease, background-color 0.3s ease !important;
+}
+
+.btn:hover {
+  background-color: var(--hover-blue) !important;
+  transform: scale(1.05) !important;
+}
+
+.btn-outline-primary:hover {
+  color: var(--text-dark) !important;
+  background-color: var(--hover-blue) !important;
+  border-color: var(--hover-blue) !important;
+}
+
+.login, .registerForm {
+  background-color: var(--background-light-dark) !important;
+  padding: 40px !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.login h2, .registerForm h2 {
+  text-align: center !important;
+  color: var(--text-light) !important;
+}
+
+.login label, .registerForm label {
+  color: var(--text-light) !important;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  background-color: #2b2b4b !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-light) !important;
+  padding: 10px !important;
+  border-radius: 5px !important;
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+  border-color: var(--hover-blue) !important;
+  outline: none !important;
+} 
+
+.card {
+  background-color: var(--background-light-dark) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  color: var(--text-light) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card .card-title {
+  font-weight: 700 !important;
+  color: var(--text-light) !important;
+}
+
+.card .card-text {
+  color: #b0b0b0 !important;
+}
+
+.card .btn-primary {
+  background-color: var(--btn-dark-purple) !important;
+}
+
+.card .btn-primary:hover {
+  background-color: var(--hover-purple) !important;
+}
+
+.container, .container-fluid {
+  max-width: 1200px !important;
+  padding: 20px !important;
+}
+
+.container .alert {
+  background-color: var(--accent-purple) !important;
+  color: var(--text-light) !important;
+  font-weight: 600 !important;
+  border-radius: 5px !important;
+  padding: 10px 15px !important;
+}
+
+.list-group-item {
+  background-color: var(--background-light-dark) !important;
+  border: none !important;
+  color: var(--text-light) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.list-group-item:hover {
+  background-color: var(--accent-purple) !important;
+}
+
+.list-group-item .btn-danger {
+  background-color: #990000 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.list-group-item .btn-danger:hover {
+  background-color: #cc0000 !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse !important;
+}
+
+th, td {
+  border: 1px solid var(--border-color) !important;
+  padding: 10px !important;
+  text-align: left !important;
+  color: var(--text-light) !important;
+}
+
+th {
+  background-color: var(--background-dark) !important;
+  font-weight: 700;
+}
+
+td {
+  background-color: var(--background-light-dark) !important;
+}
+
+.search-bar {
+  background-color: var(--background-light-dark) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 8px !important;
+  border-radius: 5px !important;
+  margin-bottom: 15px !important;
+}
+
+.search-bar input {
+  background-color: transparent !important;
+  color: var(--text-light) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.search-bar button {
+  background-color: var(--accent-blue) !important;
+  color: var(--text-light) !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+}
+
+.search-bar button:hover {
+  background-color: var(--hover-blue) !important;
+}
+
+.body-footer {
+  background-color: var(--background-dark) !important;
+  color: var(--text-light) !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+.body-footer a {
+  color: var(--text-light) !important;
+}
+
+.body-footer a:hover {
+  color: var(--hover-blue) !important;
+}
+
+.category-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 15px !important;
+}
+
+.category-nav button {
+  background-color: var(--background-light-dark) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-light) !important;
+  padding: 8px 12px !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.category-nav button:hover {
+  background-color: var(--accent-blue) !important;
+  color: var(--text-dark) !important;
+}
