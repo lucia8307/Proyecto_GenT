@@ -135,8 +135,8 @@ const SearchMaterials = () => {
           </>
           ) : material.type === "PDF" ? (
             <>
-              <div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF icon" />
+              <div style={{ display: 'flex', alignItems: 'center', padding: '10px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f2f2f2' }}>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF icon" style={{ width: '50px', marginRight: '10px' }} />
                 <div>
                   <p className="mb-0"><strong>{material.materialName}</strong></p>
                   <p className="mb-0 text-muted">PDF</p>
