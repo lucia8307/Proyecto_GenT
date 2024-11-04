@@ -5,15 +5,18 @@ const MaterialCard = ({ material }) => {
     <div className="card mt-3">
       <div className="card-body">
         <h5 className="card-title">{material?.materialName || "Nombre no disponible"}</h5>
-        <p className="card-text">{material?.description || "Descripción no disponible"}</p>
+        <p className="card-text"><strong>Descripción: </strong>{material?.description || "Descripción no disponible"}</p>
         <p className="card-text"><strong>Categoría:</strong> {material.category}</p>
 
         {material.type === "Imagen" || material.type === "Fisico" ? (
           <>
-            <img src={material.fileURL} alt={material.materialName} style={{ width: '100%' }} />
+          <div style={{ width: "300px", height: "300px", overflow: "hidden", position: "relative", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}>
+            <img src={material.fileURL} alt={material.materialName} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", borderRadius: "inherit" }} />
+            </div>
             <a href={material.fileURL} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-2">
-              Ver Imagen
+            Ver Imagen
             </a>
+            
           </>
           ) : material.type === "PDF" ? (
             <>
@@ -30,16 +33,13 @@ const MaterialCard = ({ material }) => {
             </>
           ) : null}
 
-        <p className="card-text">
-          <small className="text-muted">Tipo: {material?.type || "Desconocido"}</small>
-        </p>
-        <p className="card-text">
-          <small className="text-muted">Medio de Contacto: {material?.contacto || "Desconocido"}</small>
-        </p>
+        <p className="card-text"><strong>Tipo:</strong> {material.type || 'Tipo no disponible'}</p>
+
+        <p className="card-text"><strong>Medio de Contacto: </strong> {material.contacto || 'Tipo no disponible'}</p>
 
         {material?.createdAt && (
           <p className="card-text">
-            <small className="text-muted">Subido el: {new Date(material.createdAt.seconds * 1000).toLocaleDateString()}</small>
+            <small className="card-text">Subido el: {new Date(material.createdAt.seconds * 1000).toLocaleDateString()}</small>
           </p>
         )}
       </div>
