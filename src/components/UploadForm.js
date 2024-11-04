@@ -128,7 +128,7 @@ const UploadMaterialForm = () => {
               <option value="Actividades Fisicas y Deportes">Actividades Fisicas y Deportes</option>
               <option value="Artes y Diseño">Artes y Diseño</option>
               <option value="Comunicación y Lenguas">Comunicación y Lenguas</option>
-              <option value="Economia y Administración">Economía y Administración</option>
+              <option value="Economía y Administración">Economía y Administración</option>
               <option value="Naturaleza y Ambiente">Naturaleza y Ambiente</option>
               <option value="Salud">Salud</option>
               <option value="Seguridad y Defensa">Seguridad y Defensa</option>
